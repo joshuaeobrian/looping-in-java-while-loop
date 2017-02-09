@@ -1,7 +1,5 @@
 package com.theironyard;
 
-import java.util.Random;
-
 /**
  * This class is used to guess a number up to a given number. It has one static
  * method, guessNumber(). Your job is to implement it as described below.
