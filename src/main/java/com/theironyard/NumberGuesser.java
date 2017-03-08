@@ -58,7 +58,7 @@ public class NumberGuesser {
             //increment guesses
             guessCount++;
 
-            //compare random number to correctNumber
+            //sets random number
             guess = random.nextInt(upTo+1);
 
 
