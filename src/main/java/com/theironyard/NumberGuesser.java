@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.Random;
+
 /**
  * This class is used to guess a number up to a given number. It has one static
  * method, guessNumber(). Your job is to implement it as described below.
@@ -47,22 +49,30 @@ public class NumberGuesser {
      */
     public static int guessNumber(int correctNumber, int upTo){
         // todo: make an initial guess at the correct number
-
-
+        int guess= - 2;
+        int guessCount=0;
+        Random random = new Random();
 
         // todo: loop while the guess is incorrect. Be sure to use a while loop.
+        while(correctNumber != guess){
+            //increment guesses
+            guessCount++;
+
+            //compare random number to correctNumber
+            guess = random.nextInt(upTo+1);
 
 
 
             // todo: guess again
-
-
-
+        }
         // todo: output a string indicating the number of guesses made. It should read "It took XYZ tries to guess your number.", where XYZ is the number of attempts made.
+        // :'( why does your test hate printf with %s
+        //System.out.printf("It took %s tries to guess your number.",guessCount);
 
+        System.out.println("It took "+guessCount+" tries to guess your number.");
 
         // todo: return the guessed number
-        return -100;
+        return guess;
     }
 
 }
